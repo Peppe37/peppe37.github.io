@@ -1,27 +1,101 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-}
-
-header {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-}
-
-section {
-    margin: 2rem;
-    padding: 1rem;
-}
-
-h1, h2 {
     color: #333;
 }
 
-a {
-    color: #007BFF;
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, #4caf50, #81c784);
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 0.5rem 0;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+.hero .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 10px 20px;
+    color: #4caf50;
+    background: #fff;
+    border: none;
+    border-radius: 5px;
     text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.hero .btn:hover {
+    background: #e8f5e9;
+}
+
+/* Sections */
+section {
+    padding: 60px 0;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #4caf50;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Projects */
+.projects .project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.projects .project {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    background: #f9f9f9;
+}
+
+.projects .project h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.projects .project a {
+    color: #4caf50;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.projects .project a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
 }
