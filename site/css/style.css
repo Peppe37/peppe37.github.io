@@ -261,3 +261,6 @@ dialog[open] { animation:pop .25s cubic-bezier(.2,.8,.2,1); }
 
 .cvrow { margin:22px 0 0; color:var(--muted); font-size:.95rem; }
 .cvrow a { display:inline-block; padding:12px 8px; font-weight:600; }
+
+/* The glow of the first screen fades into the page instead of ending on an edge */
+.hero::after { content:""; position:absolute; left:0; right:0; bottom:0; height:110px; background:linear-gradient(transparent, var(--bg)); pointer-events:none; }
