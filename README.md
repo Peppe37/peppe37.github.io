@@ -35,7 +35,8 @@ site/                  everything that is published
   404.html  robots.txt  sitemap.xml
 scripts/
   build_cv.py          builds the two CV PDFs with headless Chrome
-  check_site.py        checks the site before it goes out
+  check.sh             runs every check CI runs (use it before a push)
+  check_site.py        the site checks: translations, links, privacy, sizes, CV
 .github/
   workflows/           ci.yml, deploy.yml, links.yml
   dependabot.yml       keeps the actions up to date
@@ -50,7 +51,7 @@ Needs Python 3 and, for the CV, Google Chrome or Chromium.
 ```sh
 python3 scripts/build_cv.py              # makes the CV PDFs (they are generated, not committed)
 python3 -m http.server -d site 8000      # then open http://localhost:8000
-python3 scripts/check_site.py --cv       # the same checks CI runs
+sh scripts/check.sh                      # all the checks CI runs, stopping at the first that fails
 ```
 
 **Changing a text:** edit it in `site/js/i18n.js`, in both languages. A text that is in the page needs its key (`data-i18n="..."`) in both dictionaries; `check_site.py` fails if one is missing or unused.

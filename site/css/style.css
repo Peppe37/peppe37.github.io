@@ -144,7 +144,8 @@
   .morecard .body { justify-content:center; }
   .morecard { justify-content:center; background:linear-gradient(135deg,var(--glow1),var(--glow2)), var(--card2); }
   .morecard p a { font-weight:600; }
-  @media (min-width:1000px) { .morecard { grid-column:span 2; } }
+  .morecard { grid-column:1 / -1; }
+  .morecard .body { padding:22px 26px; }
 
   /* ---------- Timeline ---------- */
   .cols { display:grid; grid-template-columns:1fr 1fr; gap:40px; margin-top:30px; }
