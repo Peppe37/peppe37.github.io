@@ -33,7 +33,7 @@ jobs:
         run: |
           printf '\n<!-- built from %s on %s -->\n' "$GITHUB_SHA" "$(date -u +%Y-%m-%dT%H:%MZ)" >> site/index.html
 
-      - uses: actions/configure-pages@v5
+      - uses: actions/configure-pages@v6
 
       - uses: actions/upload-pages-artifact@v3
         with:
