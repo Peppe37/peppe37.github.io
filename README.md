@@ -71,4 +71,4 @@ GitHub Pages is set to **Source: GitHub Actions** (Settings → Pages). The CV P
 
 ## License
 
-The **code** (HTML, CSS, JavaScript, scripts, workflows) is MIT: see [LICENSE](LICENSE). The **content** (texts, CV, logo, photos) is mine and all rights are reserved. The screenshots show other people's sites, which belong to their owners.
+The **code** (HTML, CSS, JavaScript, scripts, workflows) is MIT: see [LICENSE](LICENSE). The **content** (texts, CV, logo, photos) is mine and all rights are reserved: see [CONTENT_LICENSE.md](CONTENT_LICENSE.md). The screenshots show other people's sites, which belong to their owners.
