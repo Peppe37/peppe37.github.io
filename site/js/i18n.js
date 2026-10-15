@@ -33,15 +33,11 @@ window.PORTFOLIO_I18N = {
     oNotch: 'A living notch for macOS: now playing, calendar, a shelf for files, device popups and a plugin system with its own store. Free and open source.',
     oP8s: "A batteries-included async Python framework that mixes Django's developer experience with FastAPI's speed, with AI-native features built in.",
     oTap: 'Track All Parcels: an open source, self-hosted dashboard that follows your packages across InPost, Poste Italiane, BRT, GLS and more, in one place.',
-    oRed: 'A desktop file manager that finds documents by meaning, not by path: it indexes your files, searches by keyword and by vector, and tags them with AI.',
-    oMask: 'A multi-agent framework coordinated by a lead agent, with plugins, long-term memory in a vector database and a knowledge graph, running on local LLMs.',
-    oPy: 'A browser IDE for learning Python. The code runs in the browser, and a Socratic AI tutor explains your errors with hints instead of giving the answer.',
-    oOdy: 'A digital atlas of your experiences: map where you have been, unlock achievements based on the Fibonacci sequence and share journeys with others.',
-    site: 'Website', docs: 'Docs', oAllT: 'And more', oMore: 'Also on GitHub: small games like', and: 'and', oMore2: ', and a virtual tabletop for role-playing, ', oAll: 'See all repositories',
+    site: 'Website', docs: 'Docs', oAllT: 'And more', oMore: 'Also on GitHub: a small game in C++,', oAll: 'GitHub profile',
     eEyebrow: 'Experience and education', eTitle: 'Where I have worked and studied', eWork: 'Work', eStudy: 'Education',
     e1o: 'GD Services · Rome', e1w: 'Nov 2025 – now', e1t: 'Software developer', e1a: 'Backend software development and maintenance (Python and React).', e1b: 'Design of APIs and MCP servers.', e1c: 'AI solutions in the Research and Development team.',
     e2w: 'Oct 2022 – Dec 2023', e2t: 'Software developer', e2a: 'Full-stack development and maintenance (Python and Django, AWS, React).', e2b: 'API design and cross-platform performance tuning.', e2c: 'Debugging and bug fixing for scalability and security.',
-    e3w: 'Sep 2023 – now', e3t: 'Member, Poliba Corse', e3o: 'Politecnico di Bari Formula SAE team', e3a: 'Developing the new website of the team.',
+    e3w: 'Sep 2023 – now', e3t: 'Member, Poliba Corse', e3o: 'Politecnico di Bari Formula SAE team', e3a: 'University project: developing the new website of the team.',
     s1w: '2022 – now', s1t: 'BSc in Computer Science (L-31)', s1o: 'University of Bari Aldo Moro',
     s2w: 'May 2022', s2t: 'INFN internship', s2o: 'National Institute for Nuclear Physics (Frascati labs)', s2a: 'Data analysis and automation in Python.',
     s3w: '2020 – 2021', s3t: 'Robotics and embedded systems', s3o: 'Sitael (Mola di Bari) and Liceo Amaldi (Bitetto)', s3a: 'Work-experience programme on robotics projects; Arduino certification.',
@@ -52,7 +48,9 @@ window.PORTFOLIO_I18N = {
     k6: 'Beyond code', k6a: 'Guitar, violin, piano', k6b: 'Making and DIY', k6c: 'Basketball', k6d: 'Bodybuilding', k6e: 'Motorsport',
     cEyebrow: 'Contact', cTitle: "Let's build something",
     cLead: 'Looking for a developer, or for a website for your business or association? Write to me and I will get back to you.',
-    cCv: 'My CV:', foot: 'Made by hand, no frameworks.'
+    cCv: 'My CV:',
+    mTitle: 'Write to me', mCopy: 'Copy address', mGmail: 'Open Gmail', mApp: 'Open mail app', mCopied: 'Address copied.', mCopyFail: 'Could not copy: select the address above.',
+    subjHello: 'Hello Giuseppe', subjProject: 'Website project'
   },
   it: {
     nAbout: 'Chi sono', nWork: 'Lavori', nOss: 'Open source', nExp: 'Esperienza', nSkills: 'Competenze', nContact: 'Contatti',
@@ -86,15 +84,11 @@ window.PORTFOLIO_I18N = {
     oNotch: 'Un notch vivo per macOS: musica in riproduzione, calendario, una mensola per i file, popup dei dispositivi e un sistema di plugin con il suo store. Gratuito e open source.',
     oP8s: 'Un framework Python asincrono con tutto incluso, che unisce l\'esperienza di sviluppo di Django alla velocità di FastAPI, con funzioni native per l\'AI.',
     oTap: 'Track All Parcels: una dashboard open source e self-hosted che segue i tuoi pacchi su InPost, Poste Italiane, BRT, GLS e altri, in un unico posto.',
-    oRed: 'Un file manager desktop che trova i documenti per significato e non per percorso: indicizza i file, cerca per parola chiave e per vettori e li etichetta con l\'AI.',
-    oMask: 'Un framework multi-agente coordinato da un agente principale, con plugin, memoria a lungo termine in un database vettoriale e un grafo di conoscenza, su LLM locali.',
-    oPy: 'Un IDE nel browser per imparare Python. Il codice gira nel browser e un tutor AI socratico spiega gli errori con indizi invece di dare la soluzione.',
-    oOdy: 'Un atlante digitale delle tue esperienze: segna dove sei stato, sblocca traguardi basati sulla sequenza di Fibonacci e condividi i viaggi con altri.',
-    site: 'Sito', docs: 'Documentazione', oAllT: 'E altro', oMore: 'Su GitHub anche piccoli giochi come', and: 'e', oMore2: ', e un tavolo virtuale per giochi di ruolo, ', oAll: 'Vedi tutte le repository',
+    site: 'Sito', docs: 'Documentazione', oAllT: 'E altro', oMore: 'Su GitHub anche un piccolo gioco in C++,', oAll: 'Profilo GitHub',
     eEyebrow: 'Esperienza e formazione', eTitle: 'Dove ho lavorato e studiato', eWork: 'Lavoro', eStudy: 'Formazione',
     e1o: 'GD Services · Roma', e1w: 'Nov 2025 – oggi', e1t: 'Sviluppatore software', e1a: 'Sviluppo e manutenzione di software backend (Python e React).', e1b: 'Progettazione di API e server MCP.', e1c: 'Soluzioni AI nel team di Ricerca e Sviluppo.',
     e2w: 'Ott 2022 – Dic 2023', e2t: 'Sviluppatore software', e2a: 'Sviluppo e manutenzione full-stack (Python e Django, AWS, React).', e2b: 'Progettazione di API e ottimizzazione delle prestazioni multipiattaforma.', e2c: 'Debugging e risoluzione di bug per scalabilità e sicurezza.',
-    e3w: 'Set 2023 – oggi', e3t: 'Membro, Poliba Corse', e3o: 'Team di Formula SAE del Politecnico di Bari', e3a: 'Sviluppo del nuovo sito del team.',
+    e3w: 'Set 2023 – oggi', e3t: 'Membro, Poliba Corse', e3o: 'Team di Formula SAE del Politecnico di Bari', e3a: 'Progetto universitario: sviluppo del nuovo sito del team.',
     s1w: '2022 – oggi', s1t: 'Laurea triennale in Informatica (L-31)', s1o: 'Università degli Studi di Bari Aldo Moro',
     s2w: 'Mag 2022', s2t: 'Stage INFN', s2o: 'Istituto Nazionale di Fisica Nucleare (Laboratori di Frascati)', s2a: 'Analisi dati e automazione in Python.',
     s3w: '2020 – 2021', s3t: 'Robotica e sistemi embedded', s3o: 'Sitael (Mola di Bari) e Liceo Amaldi (Bitetto)', s3a: 'PCTO su progetti di robotica; certificazione Arduino.',
@@ -105,6 +99,8 @@ window.PORTFOLIO_I18N = {
     k6: 'Oltre il codice', k6a: 'Chitarra, violino, pianoforte', k6b: 'Making e fai da te', k6c: 'Basket', k6d: 'Bodybuilding', k6e: 'Motorsport',
     cEyebrow: 'Contatti', cTitle: 'Costruiamo qualcosa',
     cLead: 'Cerchi uno sviluppatore o un sito per la tua attività o associazione? Scrivimi e ti rispondo.',
-    cCv: 'Il mio CV:', foot: 'Fatto a mano, senza framework.'
+    cCv: 'Il mio CV:',
+    mTitle: 'Scrivimi', mCopy: 'Copia indirizzo', mGmail: 'Apri Gmail', mApp: 'Apri app di posta', mCopied: 'Indirizzo copiato.', mCopyFail: 'Impossibile copiare: seleziona l\'indirizzo qui sopra.',
+    subjHello: 'Ciao Giuseppe', subjProject: 'Progetto sito web'
   }
 };

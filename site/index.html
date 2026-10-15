@@ -70,7 +70,7 @@
     <div class="social">
       <a href="https://github.com/Peppe37" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.83 1.19 3.09 0 4.42-2.7 5.4-5.27 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg></a>
       <a href="https://www.linkedin.com/in/giuseppe-lapietra/" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11.5H3V9.75zm6.5 0h3.83v1.57h.06c.53-1 1.84-2.07 3.78-2.07 4.04 0 4.78 2.66 4.78 6.1v5.9h-4v-5.23c0-1.25-.02-2.85-1.74-2.85-1.74 0-2 1.36-2 2.76v5.32h-4V9.75z"/></svg></a>
-      <a href="mailto:lapietra.giu@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.2L4.3 7 4 8.7l8 5.3 8-5.3-.3-1.7L12 12.2z"/></svg></a>
+      <a href="mailto:lapietra.giu@gmail.com" data-mail="hello" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.2L4.3 7 4 8.7l8 5.3 8-5.3-.3-1.7L12 12.2z"/></svg></a>
     </div>
   </div>
   <div class="scroll" aria-hidden="true"></div>
@@ -120,7 +120,7 @@
     </div>
     <div class="banner rv">
       <p data-i18n="hBanner">Tell me about your project: I reply with a clear plan and a quote.</p>
-      <a class="btn primary" id="mailHire" href="mailto:lapietra.giu@gmail.com?subject=Website%20project"><span data-i18n="hBtn">Get in touch</span></a>
+      <a class="btn primary" id="mailHire" data-mail="project" href="mailto:lapietra.giu@gmail.com?subject=Website%20project"><span data-i18n="hBtn">Get in touch</span></a>
     </div>
   </div>
 </section>
@@ -219,56 +219,16 @@
         </div>
       </article>
 
-      <article class="card rv oss" data-repo="rednif-bltin">
-        <div class="cover" style="background:linear-gradient(135deg,#0ea5e9,#6366f1)"><b>{ }</b></div>
-        <div class="body">
-          <div class="meta"><span class="badge">Rust · Desktop</span><span class="star"></span></div>
-          <h3>rednif-bltin</h3>
-          <p data-i18n="oRed">A desktop file manager that finds documents by meaning, not by path: it indexes your files, searches by keyword and by vector, and tags them with AI.</p>
-          <div class="tags"><span>Rust</span><span>Tauri</span><span>tantivy</span><span>Embeddings</span></div>
-          <div class="links"><a href="https://github.com/Peppe37/rednif-bltin" target="_blank" rel="noopener">GitHub</a></div>
-        </div>
-      </article>
 
-      <article class="card rv oss" data-repo="mask" style="--d:.06s">
-        <div class="cover" style="background:linear-gradient(135deg,#f97316,#db2777)"><b>MA</b></div>
-        <div class="body">
-          <div class="meta"><span class="badge">Python · AI agents</span><span class="star"></span></div>
-          <h3>mask</h3>
-          <p data-i18n="oMask">A multi-agent framework coordinated by a lead agent, with plugins, long-term memory in a vector database and a knowledge graph, running on local LLMs.</p>
-          <div class="tags"><span>Python</span><span>Qdrant</span><span>Neo4j</span><span>PostgreSQL</span><span>Ollama</span></div>
-          <div class="links"><a href="https://github.com/Peppe37/mask" target="_blank" rel="noopener">GitHub</a></div>
-        </div>
-      </article>
 
-      <article class="card rv oss" data-repo="py-tutor" style="--d:.12s">
-        <div class="cover" style="background:linear-gradient(135deg,#22c55e,#0d9488)"><b>🐍</b></div>
-        <div class="body">
-          <div class="meta"><span class="badge">React · FastAPI</span><span class="star"></span></div>
-          <h3>PyTutor</h3>
-          <p data-i18n="oPy">A browser IDE for learning Python. The code runs in the browser, and a Socratic AI tutor explains your errors with hints instead of giving the answer.</p>
-          <div class="tags"><span>React</span><span>Pyodide</span><span>FastAPI</span><span>Docker</span></div>
-          <div class="links"><a href="https://github.com/Peppe37/py-tutor" target="_blank" rel="noopener">GitHub</a></div>
-        </div>
-      </article>
 
-      <article class="card rv oss" data-repo="Odyssey">
-        <div class="cover" style="background:linear-gradient(135deg,#a855f7,#3b82f6)"><b>Ω</b></div>
-        <div class="body">
-          <div class="meta"><span class="badge">TypeScript · Web</span><span class="star"></span></div>
-          <h3>Odyssey</h3>
-          <p data-i18n="oOdy">A digital atlas of your experiences: map where you have been, unlock achievements based on the Fibonacci sequence and share journeys with others.</p>
-          <div class="tags"><span>React</span><span>FastAPI</span><span>SQLite</span><span>Tailwind</span></div>
-          <div class="links"><a href="https://github.com/Peppe37/Odyssey" target="_blank" rel="noopener">GitHub</a></div>
-        </div>
-      </article>
 
       <article class="card rv morecard">
         <div class="body">
           <div class="meta"><span class="badge">GitHub</span></div>
           <h3 data-i18n="oAllT">And more</h3>
-          <p><span data-i18n="oMore">Also on GitHub: small games like</span> <a href="https://github.com/Peppe37/SpaceInvaders-cpp" target="_blank" rel="noopener">SpaceInvaders-cpp</a> (C++, SFML) <span data-i18n="and">and</span> <a href="https://github.com/Peppe37/TalesOfTimeGame" target="_blank" rel="noopener">Tales of Time</a> (Godot)<span data-i18n="oMore2">, and a virtual tabletop for role-playing, </span><a href="https://github.com/Peppe37/AnD" target="_blank" rel="noopener">AnD</a>.</p>
-          <div class="links"><a href="https://github.com/Peppe37?tab=repositories" target="_blank" rel="noopener" data-i18n="oAll">See all repositories</a></div>
+          <p><span data-i18n="oMore">Also on GitHub: a small game in C++,</span> <a href="https://github.com/Peppe37/SpaceInvaders-cpp" target="_blank" rel="noopener">SpaceInvaders-cpp</a> (SFML).</p>
+          <div class="links"><a href="https://github.com/Peppe37" target="_blank" rel="noopener" data-i18n="oAll">GitHub profile</a></div>
         </div>
       </article>
     </div>
@@ -305,11 +265,7 @@
               <li data-i18n="e2c">Debugging and bug fixing for scalability and security.</li>
             </ul>
           </li>
-          <li>
-            <div class="when" data-i18n="e3w">Sep 2023 – now</div>
-            <h4 data-i18n="e3t">Member, Poliba Corse</h4>
-            <div class="org" data-i18n="e3o">Politecnico di Bari Formula SAE team</div>
-            <ul><li data-i18n="e3a">Developing the new website of the team.</li></ul>
+</ul>
           </li>
         </ol>
       </div>
@@ -320,6 +276,12 @@
             <div class="when" data-i18n="s1w">2022 – now</div>
             <h4 data-i18n="s1t">BSc in Computer Science (L-31)</h4>
             <div class="org" data-i18n="s1o">University of Bari Aldo Moro</div>
+          </li>
+          <li>
+            <div class="when" data-i18n="e3w">Sep 2023 – now</div>
+            <h4 data-i18n="e3t">Member, Poliba Corse</h4>
+            <div class="org" data-i18n="e3o">Politecnico di Bari Formula SAE team</div>
+            <ul><li data-i18n="e3a">University project: developing the new website of the team.</li></ul>
           </li>
           <li>
             <div class="when" data-i18n="s2w">May 2022</div>
@@ -370,18 +332,32 @@
       <h2><span class="grad" data-i18n="cTitle">Let's build something</span></h2>
       <p class="lead" data-i18n="cLead">Looking for a developer, or for a website for your business or association? Write to me and I will get back to you.</p>
       <div class="cta">
-        <a class="btn primary" id="mailMain" href="mailto:lapietra.giu@gmail.com?subject=Hello%20Giuseppe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>lapietra.giu@gmail.com</a>
+        <a class="btn primary" id="mailMain" data-mail="hello" href="mailto:lapietra.giu@gmail.com?subject=Hello%20Giuseppe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>lapietra.giu@gmail.com</a>
         <a class="btn" href="https://www.linkedin.com/in/giuseppe-lapietra/" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn" href="https://github.com/Peppe37" target="_blank" rel="noopener">GitHub</a>
       </div>
-      <p style="margin:26px 0 0; color:var(--muted); font-size:.95rem"><span data-i18n="cCv">My CV:</span> <a class="cv-en" href="assets/cv/Giuseppe-Lapietra-CV-en.pdf" download>English (PDF)</a> · <a class="cv-it" href="assets/cv/Giuseppe-Lapietra-CV-it.pdf" download>Italiano (PDF)</a></p>
+      <p class="cvrow"><span data-i18n="cCv">My CV:</span> <a class="cv-en" href="assets/cv/Giuseppe-Lapietra-CV-en.pdf" download>English (PDF)</a> · <a class="cv-it" href="assets/cv/Giuseppe-Lapietra-CV-it.pdf" download>Italiano (PDF)</a></p>
     </div>
   </div>
 </section>
 
 </main>
 
-<footer>© <span id="yr"></span> Giuseppe Lapietra · <span data-i18n="foot">Made by hand, no frameworks.</span></footer>
+<dialog id="mailDialog" aria-labelledby="mdTitle">
+  <div class="md">
+    <button class="md-close" type="button" id="mdClose" aria-label="Close">×</button>
+    <h3 id="mdTitle" data-i18n="mTitle">Write to me</h3>
+    <p class="md-addr" id="mdAddr">lapietra.giu@gmail.com</p>
+    <div class="md-actions">
+      <button class="btn primary" type="button" id="mdCopy"><span data-i18n="mCopy">Copy address</span></button>
+      <a class="btn" id="mdGmail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=lapietra.giu%40gmail.com" target="_blank" rel="noopener"><span data-i18n="mGmail">Open Gmail</span></a>
+      <a class="btn" id="mdApp" href="mailto:lapietra.giu@gmail.com"><span data-i18n="mApp">Open mail app</span></a>
+    </div>
+    <p class="md-note" id="mdNote" role="status" aria-live="polite"></p>
+  </div>
+</dialog>
+
+<footer>© <span id="yr"></span> Giuseppe Lapietra</footer>
 <button class="totop" id="totop" type="button" aria-label="Back to top"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
 
 <script src="js/i18n.js"></script>

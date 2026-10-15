@@ -48,7 +48,6 @@ DATA = {
       ("Arduino certification", "Liceo Amaldi · Bitetto (BA)", ""),
       ("English, Cambridge certificate B1", "", ""),
     ],
-    "h_more": "Other experience",
     "more": [
       ("Member, Poliba Corse", "Politecnico di Bari Formula SAE team · Sep 2023 – present", "Developing the new website of the team."),
       ("INFN internship", "Frascati National Laboratories · May 2022", "Data analysis and automation in Python."),
@@ -90,7 +89,6 @@ DATA = {
       ("Certificazione Arduino", "Liceo Amaldi · Bitetto (BA)", ""),
       ("Inglese, certificazione Cambridge B1", "", ""),
     ],
-    "h_more": "Altre esperienze",
     "more": [
       ("Membro del Poliba Corse", "Università degli studi Aldo Moro · Settembre 2023 – in corso", "Sviluppo del nuovo sito per il Team di Formula SAE del Politecnico di Bari."),
       ("Stage scolastico INFN", "Laboratori Nazionali di Frascati · Maggio 2022", "Analisi dati e automazione in Python."),
@@ -124,6 +122,7 @@ h2 { font-size: 9.6pt; text-transform: uppercase; letter-spacing: .09em; color: 
 ul { margin: 1px 0 4px; padding-left: 14px; }
 li { margin: 0; }
 .item { margin-bottom: 4px; break-inside: avoid; }
+.item.sub { margin-top: 5px; }
 p { margin: 0 0 4px; }
 .skills { display: grid; grid-template-columns: 24mm 1fr; gap: 2px 10px; }
 .skills b { font-weight: 600; }
@@ -147,9 +146,8 @@ def block(d):
     out.append(f"<h2>{e(d['h_edu'])}</h2>")
     for name, org, when in d["edu"]:
         out.append(f"<div class='row'><span><b>{e(name)}</b>{(' · ' + e(org)) if org else ''}</span><span class='when'>{e(when)}</span></div>")
-    out.append(f"<h2>{e(d['h_more'])}</h2>")
     for name, org, desc in d["more"]:
-        out.append(f"<div class='item'><b>{e(name)}</b> <span class='small'>· {e(org)}</span><div class='small'>{e(desc)}</div></div>")
+        out.append(f"<div class='item sub'><b>{e(name)}</b> <span class='small'>· {e(org)}</span><div class='small'>{e(desc)}</div></div>")
     out.append(f"<h2>{e(d['h_skills'])}</h2><div class='skills'>")
     out += [f"<b>{e(k)}</b><span>{e(v)}</span>" for k, v in d["skills"]]
     out.append("</div>")

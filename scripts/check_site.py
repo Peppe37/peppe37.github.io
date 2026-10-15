@@ -75,7 +75,10 @@ else:
         if missing: fail(f"{lang}: keys used in index.html but not translated: {', '.join(missing)}")
     if en - it: fail(f"in English only: {', '.join(sorted(en - it))}")
     if it - en: fail(f"in Italian only: {', '.join(sorted(it - en))}")
-    unused = sorted((en | it) - used - {"roles"})
+    # a text can also be used from the script (the contact dialog, the typed roles)
+    main_js = read("js", "main.js")
+    used_in_js = {k for k in (en | it) if re.search(r"\b%s\b" % re.escape(k), main_js)}
+    unused = sorted((en | it) - used - used_in_js)
     if unused: fail(f"translated but never used in index.html: {', '.join(unused)}")
     if not errors: ok(f"translations: {len(used)} keys used, {len(en)} in each language")
 

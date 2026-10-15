@@ -32,8 +32,6 @@
     $$('[data-i18n]').forEach(function (el) { var v = d[el.getAttribute('data-i18n')]; if (v != null) el.textContent = v; });
     $$('.lang button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.lang === lang)); });
     $$('.cv-link').forEach(function (a) { a.href = 'assets/cv/Giuseppe-Lapietra-CV-' + lang + '.pdf'; });
-    var sub = lang === 'it' ? 'Progetto%20sito%20web' : 'Website%20project';
-    $('#mailHire').href = 'mailto:lapietra.giu@gmail.com?subject=' + sub;
     document.title = lang === 'it' ? 'Giuseppe Lapietra – Sviluppatore software' : 'Giuseppe Lapietra – Software developer';
     restartTyping();
   }
@@ -54,6 +52,36 @@
       else if (del && text === '') { del = false; i = (i + 1) % roles.length; wait = 350; }
       tTimer = setTimeout(tick, wait);
     })();
+  }
+
+  /* ---------------- Contact dialog ---------------- */
+  var EMAIL = 'lapietra.giu@gmail.com';
+  var dlg = $('#mailDialog'), note = $('#mdNote');
+  function openMail(kind) {
+    var d = T[lang], subject = kind === 'project' ? d.subjProject : d.subjHello;
+    $('#mdGmail').href = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(EMAIL) + '&su=' + encodeURIComponent(subject);
+    $('#mdApp').href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent(subject);
+    note.textContent = '';
+    if (typeof dlg.showModal === 'function') dlg.showModal();
+    else window.location.href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent(subject);
+  }
+  $$('[data-mail]').forEach(function (a) {
+    a.addEventListener('click', function (e) { e.preventDefault(); openMail(a.getAttribute('data-mail')); });
+  });
+  $('#mdClose').addEventListener('click', function () { dlg.close(); });
+  dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });   // a tap outside closes it
+  $('#mdCopy').addEventListener('click', function () {
+    function done(okay) { note.textContent = okay ? T[lang].mCopied : T[lang].mCopyFail; }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(EMAIL).then(function () { done(true); }, function () { done(legacyCopy()); });
+    } else { done(legacyCopy()); }
+  });
+  function legacyCopy() {
+    var t = document.createElement('textarea');
+    t.value = EMAIL; t.setAttribute('readonly', ''); t.style.position = 'fixed'; t.style.opacity = '0';
+    document.body.appendChild(t); t.select();
+    var ok = false; try { ok = document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(t); return ok;
   }
 
   /* ---------------- Language buttons ---------------- */
