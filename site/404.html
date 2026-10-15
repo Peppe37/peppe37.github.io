@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Page not found – Giuseppe Lapietra</title>
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/css/style.css">
+<style>
+  .nf { min-height:100svh; display:grid; place-items:center; text-align:center; padding:24px; }
+  .nf h1 { font-size:clamp(4rem,16vw,9rem); font-weight:800; }
+  .nf p { color:var(--muted); font-size:1.15rem; margin:10px 0 26px; }
+</style>
+</head>
+<body>
+<main class="nf">
+  <div>
+    <h1><span class="grad">404</span></h1>
+    <p id="msg">This page does not exist.</p>
+    <a class="btn primary" href="/" id="back">Back to the portfolio</a>
+  </div>
+</main>
+<script>
+  // Same rule as the portfolio: the saved choice, then the system language, English by default
+  (function () {
+    var l = null; try { l = localStorage.getItem('gl-lang'); } catch (e) {}
+    if (l !== 'it' && l !== 'en') l = String((navigator.languages && navigator.languages[0]) || navigator.language || 'en').slice(0, 2).toLowerCase() === 'it' ? 'it' : 'en';
+    if (l === 'it') { document.documentElement.lang = 'it'; document.getElementById('msg').textContent = 'Questa pagina non esiste.'; document.getElementById('back').textContent = 'Torna al portfolio'; document.title = 'Pagina non trovata – Giuseppe Lapietra'; }
+  })();
+</script>
+</body>
+</html>

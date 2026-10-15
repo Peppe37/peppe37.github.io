@@ -1,13 +1,24 @@
 #!/usr/bin/env python3
-"""Builds assets/cv/Giuseppe-Lapietra-CV-{en,it}.pdf from the data below, with headless Chrome.
+"""Builds site/assets/cv/Giuseppe-Lapietra-CV-{en,it}.pdf from the data below, with headless Chrome.
 
-Usage: python3 scripts/build_cv.py
+Usage: python3 scripts/build_cv.py [output-folder]
+The PDFs are generated, not committed: CI builds them on every deploy.
 The CV carries the email, the city and the date of birth, but not the phone number.
 """
-import html, os, subprocess, tempfile
+import html, os, subprocess, sys, tempfile
+
+import shutil
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
-CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+
+def find_chrome():
+    """Chrome or Chromium: CHROME in the environment, else the usual places (macOS app, Linux binaries)."""
+    candidates = [os.environ.get("CHROME"), "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"]
+    candidates += [shutil.which(n) for n in ("google-chrome-stable", "google-chrome", "chromium", "chromium-browser")]
+    for c in candidates:
+        if c and os.path.exists(c):
+            return c
+    raise SystemExit("Chrome not found: install it or set CHROME to its path")
 
 DATA = {
   "en": {
@@ -49,7 +60,7 @@ DATA = {
                ("Software", "Fusion 360, Adobe Suite, Office, Git"),
                ("Soft skills", "Problem solving, precision, leadership, determination, punctuality")],
     "h_pers": "Personal",
-    "pers": "Musician (guitar, violin, piano). Innovation: making and DIY, founder of \"carbonium-team\" and \"print.in.garage\". Sport: bodybuilding, basketball, motorsport. Own car.",
+    "pers": "Musician (guitar, violin, piano). Innovation: making and DIY, founder of \"print.in.garage\". Sport: bodybuilding, basketball, motorsport. Own car.",
     "file": "Giuseppe-Lapietra-CV-en.pdf",
   },
   "it": {
@@ -91,7 +102,7 @@ DATA = {
                ("Software", "Fusion 360, Adobe Suite, Pacchetto Office, Git"),
                ("Soft skills", "Problem-solving, precisione, leadership, determinazione, puntualità")],
     "h_pers": "Personale",
-    "pers": "Musicista (chitarra, violino, pianoforte). Innovazione: making e DIY, founder di \"carbonium-team\" e \"print.in.garage\". Sport: bodybuilding, basket, motorsport. Automunito.",
+    "pers": "Musicista (chitarra, violino, pianoforte). Innovazione: making e DIY, founder di \"print.in.garage\". Sport: bodybuilding, basket, motorsport. Automunito.",
     "file": "Giuseppe-Lapietra-CV-it.pdf",
   },
 }
@@ -99,7 +110,7 @@ DATA = {
 CSS = """
 @page { size: A4; margin: 11mm 14mm; }
 * { box-sizing: border-box; }
-body { font: 8.9pt/1.36 -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif; color: #1d1d1f; margin: 0; }
+body { font: 8.9pt/1.36 -apple-system, "Helvetica Neue", Helvetica, Arial, "Liberation Sans", Arimo, sans-serif; color: #1d1d1f; margin: 0; }
 header { border-bottom: 2px solid #0a6cff; padding-bottom: 7px; margin-bottom: 6px; }
 h1 { font-size: 22pt; margin: 0; letter-spacing: -.02em; }
 .role { color: #0a6cff; font-weight: 600; font-size: 10.5pt; margin: 0 0 5px; }
@@ -146,13 +157,14 @@ def block(d):
     return "".join(out)
 
 def main():
-    outdir = os.path.join(ROOT, "assets", "cv")
+    outdir = os.path.abspath(sys.argv[1]) if len(sys.argv) > 1 else os.path.join(ROOT, "site", "assets", "cv")
     os.makedirs(outdir, exist_ok=True)
+    chrome = find_chrome()
     for d in DATA.values():
         with tempfile.NamedTemporaryFile("w", suffix=".html", delete=False, encoding="utf-8") as f:
             f.write(block(d)); path = f.name
         pdf = os.path.join(outdir, d["file"])
-        subprocess.run([CHROME, "--headless=new", "--disable-gpu", "--no-pdf-header-footer", f"--print-to-pdf={pdf}", "file://" + path],
+        subprocess.run([chrome, "--headless=new", "--disable-gpu", "--no-pdf-header-footer", f"--print-to-pdf={pdf}", "file://" + path],
                        check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         os.unlink(path)
         print("wrote", pdf)

@@ -1,0 +1,55 @@
+name: Deploy
+
+# Publishes the site to GitHub Pages: on every push to main, and by hand from the Actions tab.
+# The checks run first; if they fail, nothing is published.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  checks:
+    uses: ./.github/workflows/ci.yml
+
+  build:
+    name: Build
+    needs: checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build the CV PDFs into the site
+        run: python3 scripts/build_cv.py
+
+      - name: Put the version and date in the page footer comment
+        run: |
+          printf '\n<!-- built from %s on %s -->\n' "$GITHUB_SHA" "$(date -u +%Y-%m-%dT%H:%MZ)" >> site/index.html
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    name: Publish
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
