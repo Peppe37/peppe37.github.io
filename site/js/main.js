@@ -45,7 +45,6 @@
   $('#themeBtn').addEventListener('click', function () {
     var next = isDark() ? 'light' : 'dark';
     root.setAttribute('data-theme', next); safeSet('gl-theme', next);
-    document.dispatchEvent(new Event('themechange'));
   });
 
   /* ---------------- Contact dialog ---------------- */
@@ -87,7 +86,7 @@
     var h = document.documentElement.scrollHeight - window.innerHeight;
     nav.classList.toggle('scrolled', window.scrollY > 12);
     toTop.classList.toggle('show', window.scrollY > 700);
-    progress.style.transform = 'scaleX(' + (h > 0 ? Math.min(1, window.scrollY / h) : 0).toFixed(4) + ')';
+    progress.style.setProperty('--p', (h > 0 ? Math.min(1, window.scrollY / h) : 0).toFixed(4));
   }
   window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
   toTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }); });
