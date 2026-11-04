@@ -37,6 +37,7 @@ DATA = {
     "h_proj": "Selected projects",
     "proj": [
       ("Notcholino", "Open-source macOS app (Swift): a notch with now playing, calendar, file shelf and a plugin system with its own store.", "peppe37.github.io/Notcholino"),
+      ("Splash", "Open-source macOS app (Swift, early alpha): animated wallpapers, light on resources, editable with the AI agent you already use.", "github.com/Peppe37/Splash"),
       ("p8s", "Async Python framework combining Django's developer experience with FastAPI's speed, AI-native.", "github.com/Peppe37/p8s"),
       ("tap", "Self-hosted, open-source package tracking across several carriers.", "github.com/Peppe37/tap"),
       ("Websites", "Poliba Corse (Formula SAE team), MusicaInGioco (social orchestra), and my own products Printingarage and GymBoard.", "peppe37.github.io"),
@@ -55,6 +56,7 @@ DATA = {
     ],
     "h_skills": "Skills",
     "skills": [("Languages", "Python, C, C++, C#, Java, JavaScript, TypeScript, Swift, Rust, SQL, HTML5, CSS"),
+               ("Apple platforms", "Swift and SwiftUI for macOS, iOS and wearable apps"),
                ("Web and AI", "Django, FastAPI, React, REST APIs, MCP servers, AWS, Docker, LLM agents, vector databases"),
                ("Software", "Fusion 360, Adobe Suite, Office, Git"),
                ("Soft skills", "Problem solving, precision, leadership, determination, punctuality")],
@@ -78,6 +80,7 @@ DATA = {
     "h_proj": "Progetti in evidenza",
     "proj": [
       ("Notcholino", "App macOS open source (Swift): un notch con musica in riproduzione, calendario, mensola per i file e un sistema di plugin con il suo store.", "peppe37.github.io/Notcholino"),
+      ("Splash", "App macOS open source (Swift, alpha iniziale): sfondi animati leggeri, modificabili con l'agente AI che già usi.", "github.com/Peppe37/Splash"),
       ("p8s", "Framework Python asincrono che unisce l'esperienza di Django alla velocità di FastAPI, nativo per l'AI.", "github.com/Peppe37/p8s"),
       ("tap", "Tracciamento pacchi self-hosted e open source su più corrieri.", "github.com/Peppe37/tap"),
       ("Siti web", "Poliba Corse (team Formula SAE), MusicaInGioco (orchestra sociale) e i miei prodotti Printingarage e GymBoard.", "peppe37.github.io"),
@@ -96,6 +99,7 @@ DATA = {
     ],
     "h_skills": "Competenze tecniche",
     "skills": [("Linguaggi", "Python, C, C++, C#, Java, JavaScript, TypeScript, Swift, Rust, SQL, HTML5, CSS"),
+               ("Piattaforme Apple", "Swift e SwiftUI per app macOS, iOS e wearable"),
                ("Web e AI", "Django, FastAPI, React, API REST, server MCP, AWS, Docker, agenti LLM, database vettoriali"),
                ("Software", "Fusion 360, Adobe Suite, Pacchetto Office, Git"),
                ("Soft skills", "Problem-solving, precisione, leadership, determinazione, puntualità")],
