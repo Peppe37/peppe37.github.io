@@ -291,3 +291,10 @@ footer::before { content:""; position:absolute; left:24px; right:24px; top:0; he
 .mono-wrap::after { left:calc(74% + 24px); width:6px; background:var(--accent2); animation-delay:.65s; }
 @keyframes stripe { to { transform:skewX(-14deg) scaleY(1); } }
 @media (max-width:860px) { .mono-wrap::before, .mono-wrap::after { display:none; } }
+
+/* ---------- The car on the road ---------- */
+.road { position:fixed; left:0; bottom:8px; z-index:35; pointer-events:none; will-change:transform; }
+.road canvas { display:block; }
+.road .trail { position:absolute; right:92%; bottom:22%; height:3px; width:0; opacity:0; background:linear-gradient(90deg, transparent, var(--accent)); box-shadow:0 -7px 0 -1px color-mix(in srgb, var(--accent2) 70%, transparent), 0 7px 0 -1px color-mix(in srgb, var(--accent2) 70%, transparent); }
+.totop { bottom:76px; }
+@media (max-width:640px) { .totop { bottom:calc(60px + env(safe-area-inset-bottom)); } }
