@@ -12,7 +12,7 @@
   function go() {
     if (started) return; started = true;
     events.forEach(function (e) { window.removeEventListener(e, go); });
-    add('js/vendor/three.min.js', function () { add('js/glmark.js'); add('js/car.js'); });
+    add('js/vendor/three.min.js', function () { add('js/f1.js', function () { add('js/glmark.js'); add('js/car.js'); }); });
   }
   events.forEach(function (e) { window.addEventListener(e, go, { passive: true }); });
   window.addEventListener('load', function () { setTimeout(go, 6000); });
