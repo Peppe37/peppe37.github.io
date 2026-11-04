@@ -45,6 +45,7 @@
   $('#themeBtn').addEventListener('click', function () {
     var next = isDark() ? 'light' : 'dark';
     root.setAttribute('data-theme', next); safeSet('gl-theme', next);
+    document.dispatchEvent(new Event('themechange'));
   });
 
   /* ---------------- Contact dialog ---------------- */

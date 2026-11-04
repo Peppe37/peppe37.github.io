@@ -17,8 +17,8 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Giuseppe Lapietra","jobTitle":"Software developer","url":"https://peppe37.github.io/","email":"mailto:lapietra.giu@gmail.com","sameAs":["https://github.com/Peppe37","https://www.linkedin.com/in/giuseppe-lapietra/"],"alumniOf":{"@type":"CollegeOrUniversity","name":"Università degli Studi di Bari Aldo Moro"},"address":{"@type":"PostalAddress","addressRegion":"Puglia","addressCountry":"IT"}}
 </script>
-<meta name="theme-color" content="#f4f1ea" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#141311" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#eceef2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#08090c" media="(prefers-color-scheme: dark)">
 <script>try{var t=localStorage.getItem("gl-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 <link rel="stylesheet" href="css/style.css">
 
@@ -72,10 +72,13 @@
       </div>
     </div>
     <div class="mono-wrap">
-      <svg class="mono" viewBox="0 0 120 80" role="img" aria-label="GL">
-        <path class="g" pathLength="1" d="M54.4 24.6 A24 24 0 1 0 54.4 55.4 L54.4 41 L38 41"/>
-        <path class="l" pathLength="1" d="M78 16 V64 H104"/>
-      </svg>
+      <div class="gl3d" id="gl3d">
+        <svg class="mono" viewBox="0 0 120 80" role="img" aria-label="GL">
+          <path class="g" pathLength="1" d="M54.4 24.6 A24 24 0 1 0 54.4 55.4 L54.4 41 L38 41"/>
+          <path class="l" pathLength="1" d="M78 16 V64 H104"/>
+        </svg>
+      </div>
+      <p class="hint" data-i18n="hint">Drag to rotate</p>
     </div>
   </div>
 </header>
@@ -364,6 +367,8 @@
 <button class="totop" id="totop" type="button" aria-label="Back to top"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
 
 <script src="js/i18n.js"></script>
+<script src="js/vendor/three.min.js"></script>
+<script src="js/glmark.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

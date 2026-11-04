@@ -3,6 +3,7 @@
 window.PORTFOLIO_I18N = {
   en: {
     nAbout: 'About', nWork: 'Work', nOss: 'Open source', nExp: 'Experience', nSkills: 'Skills', nContact: 'Contact',
+    hint: 'Drag to rotate',
     kicker: 'Software developer · Puglia, Italy',
     role: 'Python and AI backends, web apps, and software for Apple platforms.',
     pitch: 'I build backend systems, AI tools and websites that work well and look right. Software developer at GD Services, computer science student at the University of Bari, and a maker at heart.',
@@ -55,6 +56,7 @@ window.PORTFOLIO_I18N = {
   },
   it: {
     nAbout: 'Chi sono', nWork: 'Lavori', nOss: 'Open source', nExp: 'Esperienza', nSkills: 'Competenze', nContact: 'Contatti',
+    hint: 'Trascina per ruotare',
     kicker: 'Sviluppatore software · Puglia, Italia',
     role: 'Backend Python e AI, app web e software per le piattaforme Apple.',
     pitch: 'Costruisco sistemi backend, strumenti AI e siti web che funzionano bene e hanno il giusto aspetto. Sviluppatore software in GD Services, studente di Informatica all\'Università di Bari e maker nell\'anima.',
