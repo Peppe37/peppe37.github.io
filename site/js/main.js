@@ -12,7 +12,7 @@
 
   /* Saved choice first, then the system language (any language in the list that we have), English by default */
   function detect() {
-    // A link can force a language: peppe37.github.io/?lang=it
+    // A link can force a language: giulapi.dev/?lang=it
     var asked = (new URLSearchParams(location.search).get('lang') || '').toLowerCase();
     if (asked === 'en' || asked === 'it') return asked;
     var saved = safeGet('gl-lang');
