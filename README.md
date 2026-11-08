@@ -2,7 +2,7 @@
 
 # Giuseppe Lapietra – portfolio
 
-**[peppe37.github.io](https://peppe37.github.io/)**
+**[giulapi.dev](https://giulapi.dev/)**
 
 [![Deploy](https://github.com/Peppe37/peppe37.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/Peppe37/peppe37.github.io/actions/workflows/deploy.yml)
 [![Links](https://github.com/Peppe37/peppe37.github.io/actions/workflows/links.yml/badge.svg)](https://github.com/Peppe37/peppe37.github.io/actions/workflows/links.yml)
@@ -18,7 +18,7 @@ It is one static page with no framework and no build step: HTML, CSS and a littl
 
 ## What it does
 
-- **Two languages.** English by default; the page follows the visitor's system language when it is Italian, and the EN/IT switch remembers the choice. A link can force one: [`/?lang=it`](https://peppe37.github.io/?lang=it).
+- **Two languages.** English by default; the page follows the visitor's system language when it is Italian, and the EN/IT switch remembers the choice. A link can force one: [`/?lang=it`](https://giulapi.dev/?lang=it).
 - **Light and dark** follow the system. Animations stop for visitors who ask for reduced motion.
 - **Live data.** The stars on the open-source cards are read from the GitHub API (one request, cached for an hour). Everything else works without it.
 - **Downloadable CV** in both languages, generated from the data in [`scripts/build_cv.py`](scripts/build_cv.py).
