@@ -298,3 +298,6 @@ footer::before { content:""; position:absolute; left:24px; right:24px; top:0; he
 .road .trail { position:absolute; right:92%; bottom:22%; height:3px; width:0; opacity:0; background:linear-gradient(90deg, transparent, var(--accent)); box-shadow:0 -7px 0 -1px color-mix(in srgb, var(--accent2) 70%, transparent), 0 7px 0 -1px color-mix(in srgb, var(--accent2) 70%, transparent); }
 .totop { bottom:76px; }
 @media (max-width:640px) { .totop { bottom:calc(60px + env(safe-area-inset-bottom)); } }
+
+footer { flex-wrap:wrap; gap:8px 16px; }
+footer .stats-note { flex-basis:100%; font-size:.72rem; opacity:.85; }
